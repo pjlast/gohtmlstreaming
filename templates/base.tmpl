@@ -1,0 +1,29 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <nav>
+      <h2>Some Store</h2>
+      <form>
+        <label for="search">Search</label>
+        <input type="search" name="q" id="search">
+      </form>
+      {{.Profile.Load}}
+    </nav>
+    <div class="with-sidebar">
+        <aside>
+          <h2>Categories</h2>
+          {{.Categories.Load}}
+        </aside>
+        <main>
+          <h1>Products</h1>
+          {{.Products.Load}}
+        </main>
+    </div>
+  </body>
+</html>
+{{end}}

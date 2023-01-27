@@ -1,0 +1,10 @@
+{{define "load"}}
+<span id="loading-{{ .ID }}">Loading...</span>
+{{.Flush}}
+{{.Template.Render .W}}
+<style>
+  #loading-{{.ID}} {
+    display: none;
+  }
+</style>
+{{end}}

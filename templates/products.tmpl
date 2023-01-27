@@ -1,0 +1,13 @@
+{{define "products"}}
+<ul class="grid">
+{{range .Products}}
+  <li class="card">
+    <div class="img">
+      <img src="https://cdn.britannica.com/77/146377-050-3DDD0AFE/Grooming-behaviour-mandrills.jpg" alt="">
+    </div>
+    <h2>{{.Name}}</h2>
+    <p>{{.Description}}</p>
+  </li>
+{{end}}
+</ul>
+{{end}}

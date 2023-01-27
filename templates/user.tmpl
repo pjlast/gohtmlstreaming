@@ -1,0 +1,10 @@
+{{define "profile"}}
+<ul>
+{{if .User}}
+  <li><a href="/profile">Profile</a></li>
+  <li><a href="/sign-out">Sign out</a></li>
+{{else}}
+  <li><a href="/sign-in">Sign in</a></li>
+{{end}}
+</ul>
+{{end}}
