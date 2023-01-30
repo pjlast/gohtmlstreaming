@@ -4,6 +4,9 @@
 
 body {
     margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -15,29 +18,43 @@ nav {
     background-color: #aad;
 }
 
-main, aside {
-    padding: 1rem;
-}
-
 main > ul {
     list-style: none;
     padding: 0;
 }
 
+footer {
+    background-color: #aad;
+    margin-top: auto;
+    text-align: center;
+}
+
+.title {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .with-sidebar {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: var(--s1);
+  max-width: 120ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
 }
 
 .with-sidebar > :first-child {
-  flex-grow: 1;
+  width: fit-content;
 }
 
 .with-sidebar > :last-child {
   flex-basis: 0;
   flex-grow: 999;
-  min-inline-size: 50%;
+  min-inline-size: 80%;
 }
 
 .grid {
@@ -64,7 +81,20 @@ main > ul {
   width: 100%;
 }
 
-.card .img img {
+svg {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @supports (width: min(250px, 100%)) {
